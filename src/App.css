@@ -1,1 +1,36 @@
+.header-flexbox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.header-flexbox-left{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    left: 2%;
+} 
+
+.header-flexbox-text{
+    margin-left: 5%;
+}
+
+.header-flexbox-right {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15%;
+    right: 2%;
+}
+
+.user-circle{
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 40px;
+    clip-path: circle(30% at 50% 50%);
+    background-color: #151B30;
+}
