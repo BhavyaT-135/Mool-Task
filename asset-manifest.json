@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mool-Task/static/css/main.5f80a7de.css",
+    "main.js": "/Mool-Task/static/js/main.81be4d9a.js",
+    "static/media/video-image.png": "/Mool-Task/static/media/video-image.afe75f64ca86bde0cf21.png",
+    "static/media/mool-logo.svg": "/Mool-Task/static/media/mool-logo.6c72a66ca3e5331c65b9891be27a0988.svg",
+    "index.html": "/Mool-Task/index.html",
+    "main.5f80a7de.css.map": "/Mool-Task/static/css/main.5f80a7de.css.map",
+    "main.81be4d9a.js.map": "/Mool-Task/static/js/main.81be4d9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f80a7de.css",
+    "static/js/main.81be4d9a.js"
+  ]
+}
