@@ -61,7 +61,19 @@ const Home = () => {
             backgroundColor: "#f7f7fa",
           }}
         >
-          <h1>This is the content section!</h1>
+          <div className='content-flexbox'>
+            <div className='content-heading'>
+              Welcome to Mool!
+            </div>
+            <div className='content-description'>
+              Lets start automating your payroll processes so that you <b>Save time and focus on Growth</b>
+            </div>
+            <div className='card-container'>
+              <div className='card-flexbox'>
+                <div className='card-flexbox-heading'>Getting Started</div>
+              </div>
+            </div>
+          </div>
         </Content>
       </Layout>
     </Layout>
