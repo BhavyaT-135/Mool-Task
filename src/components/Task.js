@@ -1,13 +1,11 @@
-import React from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { RightOutlined } from '@ant-design/icons';
+import React from "react";
+import 'antd/dist/antd.min.css';
+import { Button, Card } from 'antd';
+import { useParams } from "react-router-dom";
 
-export default function Tasks() {
-
-    const navigate = useNavigate();
-
-    const [tasks, setTasks] = useState([{
+const Task = () => {
+    
+    const tasks = [{
         id: 1,
         title: 'Add a profile picture',
         description: 'Distinguish yourself by having an identity',
@@ -49,32 +47,25 @@ export default function Tasks() {
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         visited: false,
         },
-    ]);
+    ];
 
-    const taskComplete = (id) => {
-        setTasks(tasks.map(task => {
-            if (task.id === id) {
-                task.visited = true;
-            }
-            return task;
-        }));
-        navigate('/tasks/' + id);
-    }
-    
+    let { id } = useParams();
+
     return (
-        tasks.map((task) => {
-            return (
-            <div className='tasks-flexbox' key={task.id}>
-                <div className='tasks-id'>{task.id}</div>
-                <div className='tasks-content-flexbox'>
-                    <div className='tasks-title'>{task.title}</div>
-                    <div className='tasks-description'>{task.description}</div>
-                </div>
-                <div className='task-arrow'>
-                    <RightOutlined style={{ fontSize: '20px', color: 'black' }} onClick={()=>taskComplete(task.id)} />
-                </div>
-            </div>    
-            );
-        })
-  )
+        <div className="site-card-border-less-wrapper" style={{ textAlign: "center", height: '100vh', padding: '30px', background: '#ececec' }}>
+            <Card
+                title={<h2>{tasks[id-1].title}</h2>}
+                bordered={false}
+                style={{
+                    width: '70%',
+                    margin: 'auto',
+                }}
+            >
+                <p style={{fontSize: '1.2em', fontWeight: '600'}}>{tasks[id-1].description}</p>
+                <Button className='task-button' type="primary" size="large" style={{ backgroundColor: '#405CD2', marginTop: '5%' }}>Task Completed</Button>
+            </Card>
+        </div>
+    )
 }
+
+export default Task;
