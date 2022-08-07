@@ -44,6 +44,7 @@
 }
 
 .content-heading{
+    z-index: 10;
     margin-top: 4%;
     margin-left: 12%;
     font-size: 2em;
@@ -52,6 +53,7 @@
 }
 
 .content-description {
+    z-index: 10;
     margin-top: 1.5%;
     margin-left: 12%;
     font-size: 1.1em;
@@ -59,6 +61,7 @@
 }
 
 .card-container{
+    z-index: 10;
     margin-top: 4%;
     margin-left: 12%;
     width: 70%;
@@ -81,4 +84,33 @@
     font-size: 1.5em;
     font-weight: bold;
     color: #151B30;
+}
+
+.yellow-box{
+    width: 3vw;
+    height: 4vw;
+    background-color: #ffb900;
+    position: absolute;
+    top: 5%;
+    left: 12%;
+}
+
+.pink-circle{
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    background-color: #ff5678;
+    position: absolute;
+    top: 35%;
+    left: 9%;
+}
+
+.blue-circle{
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    background-color: #405cd2;
+    position: absolute;
+    top: -20%;
+    right: -5%;
 }

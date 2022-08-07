@@ -13,7 +13,7 @@ const Home = () => {
         minHeight: '100vh',
       }}
     >
-      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)} style={{zIndex: 100}}>
         <div className="logo">
           <img src={moolLogo} alt="logo" style={{
             width: '40%',
@@ -33,6 +33,7 @@ const Home = () => {
         <Header
           className="site-layout-background"
           style={{
+            zIndex: 100,
             backgroundColor: "#f7f7fa",
             padding: 0,
             borderBottom: '3px solid #e8e8e8',
@@ -58,9 +59,13 @@ const Home = () => {
         </Header>
         <Content
           style={{
+            position: 'relative',
             backgroundColor: "#f7f7fa",
           }}
         >
+          <div className='yellow-box'></div>
+          <div className='pink-circle'></div>
+          <div className='blue-circle'></div>
           <div className='content-flexbox'>
             <div className='content-heading'>
               Welcome to Mool!
