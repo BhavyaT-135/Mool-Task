@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <Layout
       style={{
+        overflow: 'hidden',
         minHeight: '100vh',
       }}
     >
