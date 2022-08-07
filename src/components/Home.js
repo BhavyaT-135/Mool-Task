@@ -3,6 +3,7 @@ import 'antd/dist/antd.min.css';
 import { HomeTwoTone, BellOutlined, QuestionCircleOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
 import { Layout, Button } from 'antd';
 import React, { useState } from 'react';
+import Tasks from './Tasks';
 const { Header, Content, Sider } = Layout;
 
 const Home = () => {
@@ -76,6 +77,7 @@ const Home = () => {
             <div className='card-container'>
               <div className='card-flexbox'>
                 <div className='card-flexbox-heading'>Getting Started</div>
+                <Tasks />
               </div>
             </div>
           </div>
