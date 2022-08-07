@@ -91,7 +91,7 @@
     height: 4vw;
     background-color: #ffb900;
     position: absolute;
-    top: 5%;
+    top: 2%;
     left: 12%;
 }
 
@@ -101,8 +101,18 @@
     border-radius: 50%;
     background-color: #ff5678;
     position: absolute;
-    top: 35%;
-    left: 9%;
+    top: 16%;
+    left: 8%;
+}
+
+.green-circle{
+    height: 13vw;
+    width: 13vw;
+    border-radius: 50%;
+    background-color :#17B792;
+    position: absolute;
+    top: 37%;
+    left: -5%;
 }
 
 .blue-circle{
@@ -111,7 +121,7 @@
     border-radius: 50%;
     background-color: #405cd2;
     position: absolute;
-    top: -20%;
+    top: -10%;
     right: -5%;
 }
 
@@ -162,4 +172,95 @@
     position: absolute;
     right: 5%;
     top: 20%;
+}
+
+.videoCard-container{
+    z-index: 10;
+    margin-top: 4%;
+    margin-left: 12%;
+    width: 70%;
+    height: auto;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 4%;
+    margin-bottom: 50px;
+}
+
+.videoCard-flexbox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+}
+
+.video-image{
+    position: absolute;
+    margin-top: 5%;
+    width: 360px;
+    height: 240px;
+    margin-left: 1.5%;
+}
+
+.videoCard-guides{
+    height: 100px;
+    width: 300px;
+    border: 2px solid #9EA0A8;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    margin-left: 58%;
+    margin-top: 3%;    
+}
+
+.videoCard-faqs {
+    height: 100px;
+    width: 300px;
+    border: 2px solid #9EA0A8;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    margin-left: 58%;
+    margin-top: 4%;
+}
+
+.guides-icon{
+    height: 50px;
+    width: 50px;
+    background-color: #d3d6e2;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: #9EA0A8 solid 3px;
+    margin-left: 10%;
+    margin-top: 8%;
+}
+
+.faqs-icon {
+    height: 50px;
+    width: 50px;
+    background-color: #d3d6e2;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: #9EA0A8 solid 3px;
+    margin-left: 10%;
+    margin-top: 8%;
+}
+
+.guides-text{
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #151B30;
+}
+
+.faqs-text {
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #151B30;
 }

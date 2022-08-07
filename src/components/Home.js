@@ -1,20 +1,19 @@
 import moolLogo from '../assets/mool-logo.svg';
+import videoImage from '../assets/video-image.png';
 import 'antd/dist/antd.min.css';
 import { HomeTwoTone, BellOutlined, QuestionCircleOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
 import { Layout, Button } from 'antd';
-import React, { useState } from 'react';
 import Tasks from './Tasks';
 const { Header, Content, Sider } = Layout;
 
 const Home = () => {
-  const [collapsed, setCollapsed] = useState(false);
   return (
     <Layout
       style={{
         minHeight: '100vh',
       }}
     >
-      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)} style={{zIndex: 100}}>
+      <Sider style={{zIndex: 100}}>
         <div className="logo">
           <img src={moolLogo} alt="logo" style={{
             width: '40%',
@@ -53,8 +52,8 @@ const Home = () => {
               <QuestionCircleOutlined style={{ fontSize: '20px', marginTop: '22px' }} />
               <SettingOutlined style={{ fontSize: '20px', marginTop: '22px' }} />
                 <div className='user-circle'>
-                <UserOutlined style={{ fontSize: '20px', marginTop: '22px', color: 'white' }} />
-              </div>
+                  <UserOutlined style={{ fontSize: '20px', marginTop: '22px', color: 'white' }} />
+                </div>
             </div>
           </div>
         </Header>
@@ -67,6 +66,7 @@ const Home = () => {
           <div className='yellow-box'></div>
           <div className='pink-circle'></div>
           <div className='blue-circle'></div>
+          <div className='green-circle'></div>
           <div className='content-flexbox'>
             <div className='content-heading'>
               Welcome to Mool!
@@ -78,6 +78,24 @@ const Home = () => {
               <div className='card-flexbox'>
                 <div className='card-flexbox-heading'>Getting Started</div>
                 <Tasks />
+              </div>
+            </div>
+            <div className='videoCard-container'>
+              <div className='videoCard-flexbox'>
+                <div className='card-flexbox-heading'>Learn how to use mool</div>
+                <img className='video-image' src={videoImage} alt="video" />
+                <div className='videoCard-guides'>
+                  <div className='guides-icon'>
+                    <UserOutlined style={{ fontSize: '30px', color: '#151B30' }} />
+                  </div>
+                  <div className='guides-text'>Guides</div>
+                </div>
+                <div className='videoCard-faqs'>
+                  <div className='faqs-icon'>
+                    <UserOutlined style={{ fontSize: '30px', color: '#151B30' }} />
+                  </div>
+                  <div className='faqs-text'>FAQs</div>
+                </div>
               </div>
             </div>
           </div>
