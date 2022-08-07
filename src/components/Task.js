@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 import 'antd/dist/antd.min.css';
 import { Button, Card } from 'antd';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useCookies } from 'react-cookie';
 
 const Task = () => {
     
+    const [cookies, setCookie] = useCookies(['var1','var2','var3','var4','var5','var6','var7']);  
+
     const tasks = [{
         id: 1,
         title: 'Add a profile picture',
@@ -49,7 +52,28 @@ const Task = () => {
         },
     ];
 
+    let navigate = useNavigate();
+
     let { id } = useParams();
+
+    const taskComplete = (id) => {
+        if (id == 1) {
+            setCookie('var1', 'var1', { path: '/' });
+        } else if (id == 2) {
+            setCookie('var2', 'var2', { path: '/' });
+        } else if (id == 3) {   
+            setCookie('var3', 'var3', { path: '/' });
+        } else if (id == 4) {
+            setCookie('var4', 'var4', { path: '/' });
+        } else if (id == 5) {
+            setCookie('var5', 'var5', { path: '/' });
+        } else if (id == 6) {
+            setCookie('var6', 'var6', { path: '/' });
+        } else if (id == 7) {
+            setCookie('var7', 'var7', { path: '/' });
+        }
+        navigate('/');
+    }
 
     return (
         <div className="site-card-border-less-wrapper" style={{ textAlign: "center", height: '100vh', padding: '30px', background: '#ececec' }}>
@@ -62,7 +86,7 @@ const Task = () => {
                 }}
             >
                 <p style={{fontSize: '1.2em', fontWeight: '600'}}>{tasks[id-1].description}</p>
-                <Button className='task-button' type="primary" size="large" style={{ backgroundColor: '#405CD2', marginTop: '5%' }}>Task Completed</Button>
+                <Button className='task-button' type="primary" size="large" style={{ backgroundColor: '#405CD2', marginTop: '5%' }} onClick={()=>taskComplete(id)}>Task Completed</Button>
             </Card>
         </div>
     )

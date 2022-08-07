@@ -264,3 +264,16 @@
     font-weight: bold;
     color: #151B30;
 }
+
+.var1{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #9EA0A8;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #17B792;
+    border: #9EA0A8 solid 3px;
+}
